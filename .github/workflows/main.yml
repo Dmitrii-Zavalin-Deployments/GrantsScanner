@@ -7,6 +7,7 @@ on:
       - development
   schedule:
     - cron: '0 0 * * *' # Runs every day at midnight
+  workflow_dispatch:
 
 jobs:
   search_grants:
@@ -28,10 +29,13 @@ jobs:
       - name: Run Grant Searcher
         run: python main.py
 
-      - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main'
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./ # Since grants.html is in the root
-          keep_files: true # To not overwrite other files in the root
+      - name: Commit and push changes
+        env:
+          MY_USER_NAME: ${{ secrets.MY_USER_NAME }}
+          MY_USER_EMAIL: ${{ secrets.MY_USER_EMAIL }}
+        run: |
+          git config --global user.name "$MY_USER_NAME"
+          git config --global user.email "$MY_USER_EMAIL"
+          git add grants.html
+          git commit -m "Update grants.html" || echo "No changes to commit"
+          git push || echo "No changes to push"
