@@ -7,7 +7,7 @@ def main():
     # Initialize modules
     # query_builder = QueryBuilder()
     # search_executor = SearchExecutor()
-    html_generator = HTMLGenerator('/data/grants.json')
+    html_generator = HTMLGenerator('data/grants.json')
     # ... other module initializations
 
     # Build the search query
