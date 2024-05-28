@@ -2,7 +2,7 @@
 
 Project Directory Structure:
 
-/grant_searcher/
+/GrantsScanner/
 |-- /data/
 |   |-- all_words.txt
 |   |-- any_words.txt
@@ -24,7 +24,8 @@ Project Directory Structure:
 |   |-- test_pdf_parser.py
 |   |-- test_data_aggregator.py
 |   |-- test_html_generator.py
-|-- /github/
-|   |-- workflow.yml
+|-- /.github/
+|   |-- /workflows/
+|   |   | -- main.yml
 |-- main.py
 |-- requirements.txt
