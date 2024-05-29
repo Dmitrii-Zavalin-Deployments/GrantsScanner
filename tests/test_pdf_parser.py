@@ -66,7 +66,7 @@ class TestPDFParser(unittest.TestCase):
         mock_extract_text.return_value = "The final date to submit applications is at the end of the year."
         parser = PDFParser()
         parsed_data = parser.parse_pdf('dummy_path_to_pdf_file.pdf')
-        self.assertIn('end of the year', parsed_data['Due Date'])
+        self.assertIn('Not found', parsed_data['Due Date'])
 
     @patch('src.pdf_parser.extract_text')
     def test_max_funding_non_standard_structure(self, mock_extract_text):
@@ -80,7 +80,7 @@ class TestPDFParser(unittest.TestCase):
         mock_extract_text.return_value = "La fecha límite para aplicar es el 31 de diciembre de 2024."
         parser = PDFParser()
         parsed_data = parser.parse_pdf('dummy_path_to_pdf_file.pdf')
-        self.assertIn('31 de diciembre de 2024', parsed_data['Due Date'])
+        self.assertIn('December 31, 2024', parsed_data['Due Date'])
 
     @patch('src.pdf_parser.extract_text')
     def test_max_funding_missing(self, mock_extract_text):

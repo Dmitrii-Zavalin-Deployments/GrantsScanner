@@ -1,2 +1,3 @@
 requests
 pdfminer.six
+deep-translator==1.11.4
