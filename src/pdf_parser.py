@@ -6,12 +6,16 @@ class PDFParser:
     def __init__(self):
         current_year = datetime.now().year
         # Patterns for matching funding amounts and dates
-        self.funding_pattern = re.compile(r'(\$\d+(?:,\d{3})*(?:\.\d+)?)|(?:\b\d+(?:,\d{3})*\b)')
+        self.funding_pattern = re.compile(r'(\$\d{1,3}(?:,\d{3})*(?:\.\d+)?|\b\d{1,3}(?:,\d{3})*(?:\.\d+)?\b(?:\s?[A-Za-z]{3})?)')
         self.date_pattern = re.compile(rf'\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+\d{{1,2}}(?:st|nd|rd|th)?,?\s+(?:{current_year}|{current_year + 1})\b')
 
     def parse_pdf(self, filepath):
-        # Extract text from PDF file
-        text = extract_text(filepath).replace('\n', ' ')
+        try:
+            # Extract text from PDF file
+            text = extract_text(filepath).replace('\n', ' ')
+        except Exception as e:
+            print(f"Error: The file was not recognized as a pdf file. {e}")
+            return {'Max Funding': 'Not found', 'Due Date': 'Not found', 'Requirements': 'Not found', 'Submission Items': 'Not found'}
 
         # First, search for keywords in the text
         keyword_data = {
@@ -38,6 +42,8 @@ class PDFParser:
             ])
         }
         
+        print(keyword_data['Max Funding'])
+        
         # Then, apply regex patterns where needed
         data = {
             'Max Funding': self.match_regex(keyword_data['Max Funding'], self.funding_pattern),
@@ -49,15 +55,16 @@ class PDFParser:
         return data
 
     def search_keyword(self, text, keywords):
-        # Search for each keyword or phrase in the text using regex to allow for intervening words
+        # Search for each keyword or phrase in the text and return the entire sentence
         for keyword in keywords:
-            # Create a regex pattern that allows for other words between the keywords
-            pattern = r'\b' + r'.*?'.join(keyword.split()) + r'.*?\b'
+            # Create a regex pattern to match a sentence containing the keyword
+            # This pattern attempts to capture the whole sentence by looking for the start and end of sentences
+            pattern = r'([^.!?]*?' + r'.*?'.join(keyword.split()) + r'.*?[.!?])'
             regex = re.compile(pattern, re.IGNORECASE)
-            match = regex.search(text)
-            if match:
-                # Return the matched text without newline characters and extra spaces
-                return ' '.join(match.group(0).split())
+            matches = regex.findall(text)
+            if matches:
+                # Return the sentences without newline characters and extra spaces
+                return ' '.join(' '.join(matches).split())
         return 'Not found'
 
     def match_regex(self, text, pattern):
