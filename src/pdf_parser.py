@@ -14,22 +14,25 @@ class PDFParser:
         )
 
     def parse_pdf(self, filepath):
+        text_in_english = ''
         try:
             text = extract_text(filepath).replace('\n', ' ')
+            # Split the text into chunks of 4500 characters
+            chunks = [text[i:i+4500] for i in range(0, len(text), 4500)]
             translator = GoogleTranslator(source='auto', target='en')
-            text_in_english = translator.translate(text)
+            # Translate each chunk and concatenate
+            for chunk in chunks:
+                text_in_english += translator.translate(chunk)
         except Exception as e:
             print(f"Error: The file was not recognized as a pdf file. {e}")
             return {'Max Funding': 'Not found', 'Due Date': 'Not found', 'Requirements': 'Not found', 'Submission Items': 'Not found'}
 
-        print(text_in_english)
+        # print(text_in_english)
         
         keyword_data = {
             'Max Funding': self.search_keyword(text_in_english, [
-                'maximum funding', 'max funding', 'funding amount',
-                'funds requested', 'financial support', 'budget',
-                'amount of grant', 'total funding', 'grant size',
-                'funding', 'request', 'grant'
+                'fund', 'financial support', 'budget',
+                'funding', 'request', 'requested', 'grant'
             ]),
             'Due Date': self.search_keyword(text_in_english, [
                 'application deadline', 'submission deadline', 'due date',
@@ -49,6 +52,8 @@ class PDFParser:
                 'application components', 'submission checklist'
             ])
         }
+        
+        print(keyword_data['Max Funding'])
 
         data = {
             'Max Funding': self.match_regex(keyword_data['Max Funding'], self.funding_pattern),
@@ -78,15 +83,13 @@ class PDFParser:
 
     def match_regex(self, text, pattern):
         sentences = re.split(r'(?<=[.!?]) +', text)
-        matched_sentences = []
         for sentence in sentences:
             matches = pattern.findall(sentence)
             if matches:
-                if len(matches) > 1:
-                    # If there are multiple matches, add the whole sentence to the results
-                    matched_sentences.append(sentence)
-                else:
-                    # If there's only one match, add just the match to the results
-                    matched_sentences.append(' '.join(matches))
-        # Return the matched sentences or 'Not found' if no matches
-        return matched_sentences if matched_sentences else 'Not found'
+                # If there are multiple monetary values, return the entire sentence
+                # if len(matches) > 1:
+                return sentence
+                # If there's only one monetary value, return just that value
+                # return ' '.join(matches)
+        return 'Not found'
+
