@@ -52,18 +52,19 @@ class PDFParser:
         # Search for each keyword or phrase in the text using regex to allow for intervening words
         for keyword in keywords:
             # Create a regex pattern that allows for other words between the keywords
-            pattern = r'\b' + r'.*?'.join(keyword.split()) + r'\b'
+            pattern = r'\b' + r'.*?'.join(keyword.split()) + r'.*?\b'
             regex = re.compile(pattern, re.IGNORECASE)
-            matches = regex.findall(text)
-            if matches:
-                # Return the first match found
-                return ' '.join(matches[0].split())
+            match = regex.search(text)
+            if match:
+                # Return the matched text without newline characters and extra spaces
+                return ' '.join(match.group(0).split())
         return 'Not found'
 
     def match_regex(self, text, pattern):
         # Apply regex pattern to text
-        if text != 'Not found':
-            match = pattern.search(text)
-            if match:
-                return match.group()
+        match = pattern.search(text)
+        if match:
+            # Return the matched text without newline characters and extra spaces
+            return ' '.join(match.group(0).split())
         return 'Not found'
+
