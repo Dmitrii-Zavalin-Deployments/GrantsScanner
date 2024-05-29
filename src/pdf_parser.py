@@ -28,7 +28,8 @@ class PDFParser:
             'Max Funding': self.search_keyword(text_in_english, [
                 'maximum funding', 'max funding', 'funding amount',
                 'funds requested', 'financial support', 'budget',
-                'amount of grant', 'total funding', 'grant size'
+                'amount of grant', 'total funding', 'grant size',
+                'funding', 'request', 'grant'
             ]),
             'Due Date': self.search_keyword(text_in_english, [
                 'application deadline', 'submission deadline', 'due date',
@@ -76,7 +77,16 @@ class PDFParser:
         return 'Not found'
 
     def match_regex(self, text, pattern):
-        matches = pattern.findall(text)
-        if matches:
-            return ' '.join(' '.join(matches).split())
-        return 'Not found'
+        sentences = re.split(r'(?<=[.!?]) +', text)
+        matched_sentences = []
+        for sentence in sentences:
+            matches = pattern.findall(sentence)
+            if matches:
+                if len(matches) > 1:
+                    # If there are multiple matches, add the whole sentence to the results
+                    matched_sentences.append(sentence)
+                else:
+                    # If there's only one match, add just the match to the results
+                    matched_sentences.append(' '.join(matches))
+        # Return the matched sentences or 'Not found' if no matches
+        return matched_sentences if matched_sentences else 'Not found'

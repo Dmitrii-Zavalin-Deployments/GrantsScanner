@@ -45,7 +45,7 @@ class TestPDFParser(unittest.TestCase):
         mock_extract_text.return_value = "Applicants may request up to $10,000, though most awards are between $2,000 and $5,000."
         parser = PDFParser()
         parsed_data = parser.parse_pdf('dummy_path_to_pdf_file.pdf')
-        self.assertIn('up to $10,000', parsed_data['Max Funding'])
+        self.assertIn('Applicants may request up to $10,000, though most awards are between $2,000 and $5,000.', parsed_data['Max Funding'])
 
     @patch('src.pdf_parser.extract_text')
     def test_due_date_variations(self, mock_extract_text):
@@ -59,7 +59,7 @@ class TestPDFParser(unittest.TestCase):
         mock_extract_text.return_value = "Funding can range from $1,000 to $10,000 depending on project scope."
         parser = PDFParser()
         parsed_data = parser.parse_pdf('dummy_path_to_pdf_file.pdf')
-        self.assertIn('from $1,000 to $10,000', parsed_data['Max Funding'])
+        self.assertIn('Funding can range from $1,000 to $10,000 depending on project scope.', parsed_data['Max Funding'])
 
     @patch('src.pdf_parser.extract_text')
     def test_due_date_ambiguous(self, mock_extract_text):
@@ -73,7 +73,7 @@ class TestPDFParser(unittest.TestCase):
         mock_extract_text.return_value = "Award: $3,000; Grant: $2,500; Scholarship: $4,000."
         parser = PDFParser()
         parsed_data = parser.parse_pdf('dummy_path_to_pdf_file.pdf')
-        self.assertIn('$3,000', parsed_data['Max Funding'])
+        self.assertIn('Award: $3,000; Grant: $2,500; Scholarship: $4,000.', parsed_data['Max Funding'])
 
     @patch('src.pdf_parser.extract_text')
     def test_due_date_non_english(self, mock_extract_text):
