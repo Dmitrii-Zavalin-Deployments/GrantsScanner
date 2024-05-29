@@ -22,9 +22,6 @@ class TestPDFParser(unittest.TestCase):
         parser = PDFParser()
         parsed_data = parser.parse_pdf('dummy_path_to_pdf_file.pdf')
 
-        # Print statement to check the content of 'Max Funding'
-        print(f"Max Funding: {parsed_data['Max Funding']}")
-
         # Assertions to check if the test passes
         self.assertIn('$5,000', parsed_data['Max Funding'])
         self.assertIn('Dec 31, 2024', parsed_data['Due Date'])

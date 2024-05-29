@@ -42,8 +42,6 @@ class PDFParser:
             ])
         }
         
-        print(keyword_data['Max Funding'])
-        
         # Then, apply regex patterns where needed
         data = {
             'Max Funding': self.match_regex(keyword_data['Max Funding'], self.funding_pattern),
