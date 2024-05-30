@@ -86,10 +86,7 @@ class PDFParser:
         for sentence in sentences:
             matches = pattern.findall(sentence)
             if matches:
-                # If there are multiple monetary values, return the entire sentence
-                # if len(matches) > 1:
                 return sentence
-                # If there's only one monetary value, return just that value
-                # return ' '.join(matches)
+
         return 'Not found'
 
