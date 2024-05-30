@@ -1,0 +1,1050 @@
+[
+    {
+        "name": "Afghanistan",
+        "domain": ".af"
+    },
+    {
+        "name": "Albania",
+        "domain": ".al"
+    },
+    {
+        "name": "Algeria",
+        "domain": ".dz"
+    },
+    {
+        "name": "American Samoa",
+        "domain": ".as"
+    },
+    {
+        "name": "Andorra",
+        "domain": ".ad"
+    },
+    {
+        "name": "Angola",
+        "domain": ".ao"
+    },
+    {
+        "name": "Anguilla",
+        "domain": ".ai"
+    },
+    {
+        "name": "Antarctica",
+        "domain": ".aq"
+    },
+    {
+        "name": "Antigua and Barbuda",
+        "domain": ".ag"
+    },
+    {
+        "name": "Argentina",
+        "domain": ".ar"
+    },
+    {
+        "name": "Armenia",
+        "domain": ".am"
+    },
+    {
+        "name": "Aruba",
+        "domain": ".aw"
+    },
+    {
+        "name": "Australia",
+        "domain": ".au"
+    },
+    {
+        "name": "Austria",
+        "domain": ".at"
+    },
+    {
+        "name": "Azerbaijan",
+        "domain": ".az"
+    },
+    {
+        "name": "Bahamas",
+        "domain": ".bs"
+    },
+    {
+        "name": "Bahrain",
+        "domain": ".bh"
+    },
+    {
+        "name": "Bangladesh",
+        "domain": ".bd"
+    },
+    {
+        "name": "Barbados",
+        "domain": ".bb"
+    },
+    {
+        "name": "Belarus",
+        "domain": ".by"
+    },
+    {
+        "name": "Belgium",
+        "domain": ".be"
+    },
+    {
+        "name": "Belize",
+        "domain": ".bz"
+    },
+    {
+        "name": "Benin",
+        "domain": ".bj"
+    },
+    {
+        "name": "Bermuda",
+        "domain": ".bm"
+    },
+    {
+        "name": "Bhutan",
+        "domain": ".bt"
+    },
+    {
+        "name": "Bolivia",
+        "domain": ".bo"
+    },
+    {
+        "name": "Bosnia and Herzegovina",
+        "domain": ".ba"
+    },
+    {
+        "name": "Botswana",
+        "domain": ".bw"
+    },
+    {
+        "name": "Bouvet Island",
+        "domain": ".bv"
+    },
+    {
+        "name": "Brazil",
+        "domain": ".br"
+    },
+    {
+        "name": "British Indian Ocean Territory",
+        "domain": ".io"
+    },
+    {
+        "name": "Brunei",
+        "domain": ".bn"
+    },
+    {
+        "name": "Bulgaria",
+        "domain": ".bg"
+    },
+    {
+        "name": "Burkina Faso",
+        "domain": ".bf"
+    },
+    {
+        "name": "Burundi",
+        "domain": ".bi"
+    },
+    {
+        "name": "Cambodia",
+        "domain": ".kh"
+    },
+    {
+        "name": "Cameroon",
+        "domain": ".cm"
+    },
+    {
+        "name": "Canada",
+        "domain": ".ca"
+    },
+    {
+        "name": "Cape Verde",
+        "domain": ".cv"
+    },
+    {
+        "name": "Cayman Islands",
+        "domain": ".ky"
+    },
+    {
+        "name": "Central African Republic",
+        "domain": ".cf"
+    },
+    {
+        "name": "Chad",
+        "domain": ".td"
+    },
+    {
+        "name": "Chile",
+        "domain": ".cl"
+    },
+    {
+        "name": "China",
+        "domain": ".cn"
+    },
+    {
+        "name": "Christmas Island",
+        "domain": ".cx"
+    },
+    {
+        "name": "Cocos (Keeling) Islands",
+        "domain": ".cc"
+    },
+    {
+        "name": "Colombia",
+        "domain": ".co"
+    },
+    {
+        "name": "Comoros",
+        "domain": ".km"
+    },
+    {
+        "name": "Congo",
+        "domain": ".cg"
+    },
+    {
+        "name": "Cook Islands",
+        "domain": ".ck"
+    },
+    {
+        "name": "Costa Rica",
+        "domain": ".cr"
+    },
+    {
+        "name": "Croatia",
+        "domain": ".hr"
+    },
+    {
+        "name": "Cuba",
+        "domain": ".cu"
+    },
+    {
+        "name": "Cyprus",
+        "domain": ".cy"
+    },
+    {
+        "name": "Czech Republic",
+        "domain": ".cz"
+    },
+    {
+        "name": "Denmark",
+        "domain": ".dk"
+    },
+    {
+        "name": "Djibouti",
+        "domain": ".dj"
+    },
+    {
+        "name": "Dominica",
+        "domain": ".dm"
+    },
+    {
+        "name": "Dominican Republic",
+        "domain": ".do"
+    },
+    {
+        "name": "East Timor",
+        "domain": ".tl"
+    },
+    {
+        "name": "Ecuador",
+        "domain": ".ec"
+    },
+    {
+        "name": "Egypt",
+        "domain": ".eg"
+    },
+    {
+        "name": "El Salvador",
+        "domain": ".sv"
+    },
+    {
+        "name": "England",
+        "domain": null
+    },
+    {
+        "name": "Equatorial Guinea",
+        "domain": ".gq"
+    },
+    {
+        "name": "Eritrea",
+        "domain": ".er"
+    },
+    {
+        "name": "Estonia",
+        "domain": ".ee"
+    },
+    {
+        "name": "Ethiopia",
+        "domain": ".et"
+    },
+    {
+        "name": "Falkland Islands",
+        "domain": ".fk"
+    },
+    {
+        "name": "Faroe Islands",
+        "domain": null
+    },
+    {
+        "name": "Fiji Islands",
+        "domain": ".fj"
+    },
+    {
+        "name": "Finland",
+        "domain": ".fi"
+    },
+    {
+        "name": "France",
+        "domain": ".fr"
+    },
+    {
+        "name": "French Guiana",
+        "domain": ".gf"
+    },
+    {
+        "name": "French Polynesia",
+        "domain": ".pf"
+    },
+    {
+        "name": "French Southern territories",
+        "domain": ".tf"
+    },
+    {
+        "name": "Gabon",
+        "domain": ".ga"
+    },
+    {
+        "name": "Gambia",
+        "domain": ".gm"
+    },
+    {
+        "name": "Georgia",
+        "domain": ".ge"
+    },
+    {
+        "name": "Germany",
+        "domain": ".de"
+    },
+    {
+        "name": "Ghana",
+        "domain": ".gh"
+    },
+    {
+        "name": "Gibraltar",
+        "domain": ".gi"
+    },
+    {
+        "name": "Greece",
+        "domain": ".gr"
+    },
+    {
+        "name": "Greenland",
+        "domain": ".gl"
+    },
+    {
+        "name": "Grenada",
+        "domain": ".gd"
+    },
+    {
+        "name": "Guadeloupe",
+        "domain": ".gp"
+    },
+    {
+        "name": "Guam",
+        "domain": ".gu"
+    },
+    {
+        "name": "Guatemala",
+        "domain": ".gt"
+    },
+    {
+        "name": "Guinea",
+        "domain": ".gn"
+    },
+    {
+        "name": "Guinea-Bissau",
+        "domain": ".gw"
+    },
+    {
+        "name": "Guyana",
+        "domain": ".gy"
+    },
+    {
+        "name": "Haiti",
+        "domain": ".ht"
+    },
+    {
+        "name": "Heard Island and McDonald Islands",
+        "domain": ".hm"
+    },
+    {
+        "name": "Holy See (Vatican City State)",
+        "domain": ".va"
+    },
+    {
+        "name": "Honduras",
+        "domain": ".hn"
+    },
+    {
+        "name": "Hong Kong",
+        "domain": ".hk"
+    },
+    {
+        "name": "Hungary",
+        "domain": ".hu"
+    },
+    {
+        "name": "Iceland",
+        "domain": ".is"
+    },
+    {
+        "name": "India",
+        "domain": ".in"
+    },
+    {
+        "name": "Indonesia",
+        "domain": ".id"
+    },
+    {
+        "name": "Iran",
+        "domain": ".ir"
+    },
+    {
+        "name": "Iraq",
+        "domain": ".iq"
+    },
+    {
+        "name": "Ireland",
+        "domain": ".ie"
+    },
+    {
+        "name": "Israel",
+        "domain": ".il"
+    },
+    {
+        "name": "Italy",
+        "domain": ".it"
+    },
+    {
+        "name": "Ivory Coast",
+        "domain": ".ci"
+    },
+    {
+        "name": "Jamaica",
+        "domain": ".jm"
+    },
+    {
+        "name": "Japan",
+        "domain": ".jp"
+    },
+    {
+        "name": "Jordan",
+        "domain": ".jo"
+    },
+    {
+        "name": "Kazakhstan",
+        "domain": ".kz"
+    },
+    {
+        "name": "Kenya",
+        "domain": ".ke"
+    },
+    {
+        "name": "Kiribati",
+        "domain": ".ki"
+    },
+    {
+        "name": "Kuwait",
+        "domain": ".kw"
+    },
+    {
+        "name": "Kyrgyzstan",
+        "domain": ".kg"
+    },
+    {
+        "name": "Laos",
+        "domain": ".la"
+    },
+    {
+        "name": "Latvia",
+        "domain": ".lv"
+    },
+    {
+        "name": "Lebanon",
+        "domain": ".lb"
+    },
+    {
+        "name": "Lesotho",
+        "domain": ".ls"
+    },
+    {
+        "name": "Liberia",
+        "domain": ".lr"
+    },
+    {
+        "name": "Libyan Arab Jamahiriya",
+        "domain": ".ly"
+    },
+    {
+        "name": "Liechtenstein",
+        "domain": ".li"
+    },
+    {
+        "name": "Lithuania",
+        "domain": ".lt"
+    },
+    {
+        "name": "Luxembourg",
+        "domain": ".lu"
+    },
+    {
+        "name": "Macao",
+        "domain": ".mo"
+    },
+    {
+        "name": "North Macedonia",
+        "domain": ".mk"
+    },
+    {
+        "name": "Madagascar",
+        "domain": ".mg"
+    },
+    {
+        "name": "Malawi",
+        "domain": ".mw"
+    },
+    {
+        "name": "Malaysia",
+        "domain": ".my"
+    },
+    {
+        "name": "Maldives",
+        "domain": ".mv"
+    },
+    {
+        "name": "Mali",
+        "domain": ".ml"
+    },
+    {
+        "name": "Malta",
+        "domain": ".mt"
+    },
+    {
+        "name": "Marshall Islands",
+        "domain": ".mh"
+    },
+    {
+        "name": "Martinique",
+        "domain": ".mq"
+    },
+    {
+        "name": "Mauritania",
+        "domain": ".mr"
+    },
+    {
+        "name": "Mauritius",
+        "domain": ".mu"
+    },
+    {
+        "name": "Mayotte",
+        "domain": ".yt"
+    },
+    {
+        "name": "Mexico",
+        "domain": ".mx"
+    },
+    {
+        "name": "Micronesia, Federated States of",
+        "domain": null
+    },
+    {
+        "name": "Moldova",
+        "domain": ".md"
+    },
+    {
+        "name": "Monaco",
+        "domain": ".mc"
+    },
+    {
+        "name": "Mongolia",
+        "domain": ".mn"
+    },
+    {
+        "name": "Montserrat",
+        "domain": ".ms"
+    },
+    {
+        "name": "Morocco",
+        "domain": ".ma"
+    },
+    {
+        "name": "Mozambique",
+        "domain": ".mz"
+    },
+    {
+        "name": "Myanmar",
+        "domain": ".mm"
+    },
+    {
+        "name": "Namibia",
+        "domain": ".na"
+    },
+    {
+        "name": "Nauru",
+        "domain": ".nr"
+    },
+    {
+        "name": "Nepal",
+        "domain": ".np"
+    },
+    {
+        "name": "Netherlands",
+        "domain": ".nl"
+    },
+    {
+        "name": "Netherlands Antilles",
+        "domain": ".an"
+    },
+    {
+        "name": "New Caledonia",
+        "domain": ".nc"
+    },
+    {
+        "name": "New Zealand",
+        "domain": ".nz"
+    },
+    {
+        "name": "Nicaragua",
+        "domain": ".ni"
+    },
+    {
+        "name": "Niger",
+        "domain": ".ne"
+    },
+    {
+        "name": "Nigeria",
+        "domain": ".ng"
+    },
+    {
+        "name": "Niue",
+        "domain": ".nu"
+    },
+    {
+        "name": "Norfolk Island",
+        "domain": ".nf"
+    },
+    {
+        "name": "North Korea",
+        "domain": ".kp"
+    },
+    {
+        "name": "Northern Ireland",
+        "domain": null
+    },
+    {
+        "name": "Northern Mariana Islands",
+        "domain": ".mp"
+    },
+    {
+        "name": "Norway",
+        "domain": ".no"
+    },
+    {
+        "name": "Oman",
+        "domain": ".om"
+    },
+    {
+        "name": "Pakistan",
+        "domain": ".pk"
+    },
+    {
+        "name": "Palau",
+        "domain": ".pw"
+    },
+    {
+        "name": "Palestine",
+        "domain": ".ps"
+    },
+    {
+        "name": "Panama",
+        "domain": ".pa"
+    },
+    {
+        "name": "Papua New Guinea",
+        "domain": ".pg"
+    },
+    {
+        "name": "Paraguay",
+        "domain": ".py"
+    },
+    {
+        "name": "Peru",
+        "domain": ".pe"
+    },
+    {
+        "name": "Philippines",
+        "domain": ".ph"
+    },
+    {
+        "name": "Pitcairn",
+        "domain": ".pn"
+    },
+    {
+        "name": "Poland",
+        "domain": ".pl"
+    },
+    {
+        "name": "Portugal",
+        "domain": ".pt"
+    },
+    {
+        "name": "Puerto Rico",
+        "domain": ".pr"
+    },
+    {
+        "name": "Qatar",
+        "domain": ".qa"
+    },
+    {
+        "name": "Reunion",
+        "domain": ".re"
+    },
+    {
+        "name": "Romania",
+        "domain": ".ro"
+    },
+    {
+        "name": "Russia",
+        "domain": ".ru"
+    },
+    {
+        "name": "Rwanda",
+        "domain": ".rw"
+    },
+    {
+        "name": "Saint Helena",
+        "domain": ".sh"
+    },
+    {
+        "name": "Saint Kitts and Nevis",
+        "domain": ".kn"
+    },
+    {
+        "name": "Saint Lucia",
+        "domain": ".lc"
+    },
+    {
+        "name": "Saint Pierre and Miquelon",
+        "domain": ".pm"
+    },
+    {
+        "name": "Saint Vincent and the Grenadines",
+        "domain": ".vc"
+    },
+    {
+        "name": "Samoa",
+        "domain": ".ws"
+    },
+    {
+        "name": "San Marino",
+        "domain": ".sm"
+    },
+    {
+        "name": "Sao Tome and Principe",
+        "domain": ".st"
+    },
+    {
+        "name": "Saudi Arabia",
+        "domain": ".sa"
+    },
+    {
+        "name": "Scotland",
+        "domain": null
+    },
+    {
+        "name": "Senegal",
+        "domain": ".sn"
+    },
+    {
+        "name": "Serbia",
+        "domain": ".rs"
+    },
+    {
+        "name": "Seychelles",
+        "domain": ".sc"
+    },
+    {
+        "name": "Sierra Leone",
+        "domain": ".sl"
+    },
+    {
+        "name": "Singapore",
+        "domain": ".sg"
+    },
+    {
+        "name": "Slovakia",
+        "domain": ".sk"
+    },
+    {
+        "name": "Slovenia",
+        "domain": ".si"
+    },
+    {
+        "name": "Solomon Islands",
+        "domain": ".sb"
+    },
+    {
+        "name": "Somalia",
+        "domain": ".so"
+    },
+    {
+        "name": "South Africa",
+        "domain": ".za"
+    },
+    {
+        "name": "South Georgia and the South Sandwich Islands",
+        "domain": ".gs"
+    },
+    {
+        "name": "South Korea",
+        "domain": ".kr"
+    },
+    {
+        "name": "South Sudan",
+        "domain": ".ss"
+    },
+    {
+        "name": "Spain",
+        "domain": ".es"
+    },
+    {
+        "name": "Sri Lanka",
+        "domain": ".lk"
+    },
+    {
+        "name": "Sudan",
+        "domain": ".sd"
+    },
+    {
+        "name": "Suriname",
+        "domain": ".sr"
+    },
+    {
+        "name": "Svalbard and Jan Mayen",
+        "domain": ".sj"
+    },
+    {
+        "name": "Swaziland",
+        "domain": ".sz"
+    },
+    {
+        "name": "Sweden",
+        "domain": ".se"
+    },
+    {
+        "name": "Switzerland",
+        "domain": ".ch"
+    },
+    {
+        "name": "Syria",
+        "domain": ".sy"
+    },
+    {
+        "name": "Tajikistan",
+        "domain": ".tj"
+    },
+    {
+        "name": "Tanzania",
+        "domain": ".tz"
+    },
+    {
+        "name": "Thailand",
+        "domain": ".th"
+    },
+    {
+        "name": "The Democratic Republic of Congo",
+        "domain": ".cd"
+    },
+    {
+        "name": "Togo",
+        "domain": ".tg"
+    },
+    {
+        "name": "Tokelau",
+        "domain": ".tk"
+    },
+    {
+        "name": "Tonga",
+        "domain": ".to"
+    },
+    {
+        "name": "Trinidad and Tobago",
+        "domain": ".tt"
+    },
+    {
+        "name": "Tunisia",
+        "domain": ".tn"
+    },
+    {
+        "name": "Turkey",
+        "domain": ".tr"
+    },
+    {
+        "name": "Turkmenistan",
+        "domain": ".tm"
+    },
+    {
+        "name": "Turks and Caicos Islands",
+        "domain": ".tc"
+    },
+    {
+        "name": "Tuvalu",
+        "domain": ".tv"
+    },
+    {
+        "name": "Uganda",
+        "domain": ".ug"
+    },
+    {
+        "name": "Ukraine",
+        "domain": ".ua"
+    },
+    {
+        "name": "United Arab Emirates",
+        "domain": ".ae"
+    },
+    {
+        "name": "United Kingdom",
+        "domain": ".gb"
+    },
+    {
+        "name": "United States",
+        "domain": ".us"
+    },
+    {
+        "name": "United States Minor Outlying Islands",
+        "domain": null
+    },
+    {
+        "name": "Uruguay",
+        "domain": ".uy"
+    },
+    {
+        "name": "Uzbekistan",
+        "domain": ".uz"
+    },
+    {
+        "name": "Vanuatu",
+        "domain": ".vu"
+    },
+    {
+        "name": "Venezuela",
+        "domain": ".ve"
+    },
+    {
+        "name": "Vietnam",
+        "domain": ".vn"
+    },
+    {
+        "name": "Virgin Islands, British",
+        "domain": ".vg"
+    },
+    {
+        "name": "Virgin Islands, U.S.",
+        "domain": ".vi"
+    },
+    {
+        "name": "Wales",
+        "domain": null
+    },
+    {
+        "name": "Wallis and Futuna",
+        "domain": ".wf"
+    },
+    {
+        "name": "Western Sahara",
+        "domain": ".eh"
+    },
+    {
+        "name": "Yemen",
+        "domain": ".ye"
+    },
+    {
+        "name": "Zambia",
+        "domain": ".zm"
+    },
+    {
+        "name": "Zimbabwe",
+        "domain": ".zw"
+    },
+    {
+        "name": "Commercial entities",
+        "domain": ".com"
+    },
+    {
+        "name": "Organizations",
+        "domain": ".org"
+    },
+    {
+        "name": "Network infrastructure",
+        "domain": ".net"
+    },
+    {
+        "name": "Educational institutions",
+        "domain": ".edu"
+    },
+    {
+        "name": "Government entities",
+        "domain": ".gov"
+    },
+    {
+        "name": "International organizations",
+        "domain": ".int"
+    },
+    {
+        "name": "Information services",
+        "domain": ".info"
+    },
+    {
+        "name": "Businesses",
+        "domain": ".biz"
+    },
+    {
+        "name": "Professionals",
+        "domain": ".pro"
+    },
+    {
+        "name": "Mobile devices",
+        "domain": ".mobi"
+    },
+    {
+        "name": "Cooperative associations",
+        "domain": ".coop"
+    },
+    {
+        "name": "Aero industry",
+        "domain": ".aero"
+    },
+    {
+        "name": "Travel and tourism industry",
+        "domain": ".travel"
+    },
+    {
+        "name": "Museum institutions",
+        "domain": ".museum"
+    },
+    {
+        "name": "Asia-Pacific region",
+        "domain": ".asia"
+    },
+    {
+        "name": "Jobs and employment",
+        "domain": ".jobs"
+    },
+    {
+        "name": "Mobile",
+        "domain": ".tel"
+    },
+    {
+        "name": "XXX entertainment",
+        "domain": ".xxx"
+    },
+    {
+        "name": "Personal sites",
+        "domain": ".name"
+    }
+]
