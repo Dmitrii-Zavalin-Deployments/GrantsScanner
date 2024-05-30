@@ -1,1 +1,4 @@
-loans agenda reports minutes
+loans
+agenda
+reports
+minutes

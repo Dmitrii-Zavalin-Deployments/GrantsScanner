@@ -1,11 +1,11 @@
 import os
+import json
 
 class QueryBuilder:
     def __init__(self):
         # Load search terms from files
         self.all_words = self.load_search_terms('data/all_words.txt')
         self.any_words = self.load_search_terms('data/any_words.txt')
-        self.domains = self.load_search_terms('data/domains.txt')
         self.none_words = self.load_search_terms('data/none_words.txt')
         self.run_number = os.getenv('GITHUB_RUN_NUMBER')
 
@@ -21,11 +21,14 @@ class QueryBuilder:
             "query": self.build_query()
         }
 
-    @staticmethod
-    def load_search_terms(file_path):
-        # Load terms from a file
-        # ...
-        return #terms
+    def load_domains(self):
+        # Read the domains.json file and create a dictionary with incremental keys starting from 0
+        with open('data/domains.json', 'r') as file:
+            domains_list = json.load(file)
+        
+        domains_dict = {str(i): domain for i, domain in enumerate(domains_list)}
+        return domains_dict
+
     
     
     
