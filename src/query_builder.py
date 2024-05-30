@@ -1,14 +1,16 @@
+import os
+
 class QueryBuilder:
     def __init__(self):
         # Load search terms from files
         self.all_words = self.load_search_terms('data/all_words.txt')
-        self.all_words = self.load_search_terms('data/any_words.txt')
-        self.all_words = self.load_search_terms('data/domains.txt')
-        self.all_words = self.load_search_terms('data/none_words.txt')
-        
+        self.any_words = self.load_search_terms('data/any_words.txt')
+        self.domains = self.load_search_terms('data/domains.txt')
+        self.none_words = self.load_search_terms('data/none_words.txt')
+        self.run_number = os.getenv('GITHUB_RUN_NUMBER')
 
     def build_query(self):
-        # Construct the search query
+        # Construct the search query using the run number
         # ...
         return #query
 

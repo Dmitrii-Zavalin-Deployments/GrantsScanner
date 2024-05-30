@@ -34,13 +34,17 @@ jobs:
       - name: List directory contents
         run: ls -la
 
+      - name: Set run number
+        run: echo "GITHUB_RUN_NUMBER=${{ github.run_number }}" >> $GITHUB_ENV
+
       - name: Commit and push changes # Need to add push to file data/grants.json
         env:
           MY_USER_NAME: ${{ secrets.MY_USER_NAME }}
           MY_USER_EMAIL: ${{ secrets.MY_USER_EMAIL }}
+          GITHUB_RUN_NUMBER: ${{ env.GITHUB_RUN_NUMBER }}
         run: |
           git config --global user.name "${{ secrets.MY_USER_NAME }}"
           git config --global user.email "${{ secrets.MY_USER_EMAIL }}"
           git add grants.html
-          git commit -m "Update grants.html" -a || echo "No changes to commit"
+          git commit -m "Update grants.html with run number $GITHUB_RUN_NUMBER" -a || echo "No changes to commit"
           git push origin "${{ github.ref }}" || echo "No changes to push"
