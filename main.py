@@ -28,7 +28,7 @@ def main():
         # Parse pdf from each download
         parsed_data = parser.parse_pdf('downloaded_file.pdf')
         print('Parsed data: ')
-        print(parsed_data)
+        print(parsed_data['Prices'])
     # 
     # Generating HTML 
     html_generator.generate_html()
