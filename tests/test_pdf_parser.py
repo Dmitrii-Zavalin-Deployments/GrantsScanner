@@ -17,21 +17,21 @@ class TestPDFParser(unittest.TestCase):
     @patch('src.pdf_parser.extract_text')
     def test_parse_pdf(self, mock_extract_text):
         # Mock the extract_text function to simulate text extraction
-        mock_extract_text.return_value = "The maximum funding available is $5,000. The application deadline is Dec 31, 2024."
+        mock_extract_text.return_value = "The maximum funding available is $ 5,000. The application deadline is Dec 31, 2024."
 
         parser = PDFParser()
         parsed_data = parser.parse_pdf('dummy_path_to_pdf_file.pdf')
 
         # Assertions to check if the test passes
-        self.assertIn('$5,000', parsed_data['Max Funding'])
+        self.assertIn('The maximum funding available is $ 5,000.', parsed_data['Max Funding'])
         self.assertIn('Dec 31, 2024', parsed_data['Due Date'])
         
     @patch('src.pdf_parser.extract_text')
     def test_max_funding_simple(self, mock_extract_text):
-        mock_extract_text.return_value = "The maximum funding available is $5,000."
+        mock_extract_text.return_value = "The maximum funding available is 5,000$."
         parser = PDFParser()
         parsed_data = parser.parse_pdf('dummy_path_to_pdf_file.pdf')
-        self.assertIn('$5,000', parsed_data['Max Funding'])
+        self.assertIn('The maximum funding available is 5,000$.', parsed_data['Max Funding'])
 
     @patch('src.pdf_parser.extract_text')
     def test_due_date_simple(self, mock_extract_text):
@@ -70,10 +70,10 @@ class TestPDFParser(unittest.TestCase):
 
     @patch('src.pdf_parser.extract_text')
     def test_max_funding_non_standard_structure(self, mock_extract_text):
-        mock_extract_text.return_value = "Award: $3,000; Grant: $2,500; Scholarship: $4,000."
+        mock_extract_text.return_value = "Award: 3,000 $; Grant: 2,500 $; Scholarship: 4,000 $."
         parser = PDFParser()
         parsed_data = parser.parse_pdf('dummy_path_to_pdf_file.pdf')
-        self.assertIn('Award: $3,000; Grant: $2,500; Scholarship: $4,000.', parsed_data['Max Funding'])
+        self.assertIn('Award: 3,000 $; Grant: 2,500 $; Scholarship: 4,000 $.', parsed_data['Max Funding'])
 
     @patch('src.pdf_parser.extract_text')
     def test_due_date_non_english(self, mock_extract_text):

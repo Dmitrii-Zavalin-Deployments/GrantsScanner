@@ -7,7 +7,7 @@ class PDFParser:
     def __init__(self):
         self.current_year = datetime.now().year
         self.funding_pattern = re.compile(
-            r'(\$\d{1,3}(?:,\d{3})*(?:\.\d+)?(?:\s?(?:million|billion|thousand))?|\b\d{1,3}(?:,\d{3})*(?:\.\d+)?\b(?:\s?[A-Za-z]{3})?)'
+            r'(?:රු\ or\ ரூ|ج\.س\.|ج\.م\.|ر\.ي\.|ر\.ع\.|د\.م\.|د\.ج\.|د\.ب\.|Ptas\.|د\.ع\.|ف\.ج\.|ل\.س\.|ر\.ق\.|ل\.ل\.|د\.ت\.|د\.إ\.|ر\.س\.|ل\.د\.|د\.ك\.|أ\.م\.|د\.أ\.|Bs\.F|ناكفا|руб\.|MOP\$|դր\.|B\.|Fr\.|Bs\.|Nu\.|лв\.|S\.|kr\.|C\$|сум|SS£|р\.|TSh|дин|FBu|ден|Ssh|грн|R\$|\.ރ|KSh|CF|КМ|Sh|Sl|Ar|kr|Le|Db|SM|\$|zł|PT|դր|Ks|¥元|MK|RM|Kč|VT|ST|FG|kn|Kz|रु|ZK|रू|Rs|MT|Ft|R₣|ብር|Rp|₮|៛|€|₱|₣|₵|₼|฿|£|₽|₫|৳|圓|D|ƒ|₦|₲|₹|﷼|G|₩|؋|L|₭|R|с|K|P|T|¥|₺|₪|₸|₾|₡)\s?\d+|\d+\s?(?:රු\ or\ ரூ|ج\.س\.|ج\.م\.|ر\.ي\.|ر\.ع\.|د\.م\.|د\.ج\.|د\.ب\.|Ptas\.|د\.ع\.|ف\.ج\.|ل\.س\.|ر\.ق\.|ل\.ل\.|د\.ت\.|د\.إ\.|ر\.س\.|ل\.د\.|د\.ك\.|أ\.م\.|د\.أ\.|Bs\.F|ناكفا|руб\.|MOP\$|դր\.|B\.|Fr\.|Bs\.|Nu\.|лв\.|S\.|kr\.|C\$|сум|SS£|р\.|TSh|дин|FBu|ден|Ssh|грн|R\$|\.ރ|KSh|CF|КМ|Sh|Sl|Ar|kr|Le|Db|SM|\$|zł|PT|դր|Ks|¥元|MK|RM|Kč|VT|ST|FG|kn|Kz|रु|ZK|रू|Rs|MT|Ft|R₣|ብር|Rp|₮|៛|€|₱|₣|₵|₼|฿|£|₽|₫|৳|圓|D|ƒ|₦|₲|₹|﷼|G|₩|؋|L|₭|R|с|K|P|T|¥|₺|₪|₸|₾|₡)'
         )
         self.date_pattern = re.compile(
            rf'\b(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+(?:\d{{1,2}}(?:st|nd|rd|th)?|(?<=\b)\d{{1,2}}(?:st|nd|rd|th)?\b),?\s+{self.current_year}\b|\b{self.current_year}\s+(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\s+\d{{1,2}}(?:st|nd|rd|th)?\b|\b\d{{1,2}}(?:st|nd|rd|th)?\s+of\s+(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?),?\s+\d{{4}}\b'
@@ -31,7 +31,7 @@ class PDFParser:
         
         keyword_data = {
             'Max Funding': self.search_keyword(text_in_english, [
-                'fund', 'financial support', 'budget',
+                'fund', 'financial support', 'budget', 'voucher', 
                 'funding', 'request', 'requested', 'grant'
             ]),
             'Due Date': self.search_keyword(text_in_english, [
