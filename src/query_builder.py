@@ -12,10 +12,20 @@ class QueryBuilder:
     def build_query(self):
         # Construct the search query using the run number
         # ...
-        return #query
+        return "query"
+
+    def get_query_data(self):
+        # Generate the dictionary with "name" and "query"
+        return {
+            "name": "name_data",
+            "query": self.build_query()
+        }
 
     @staticmethod
     def load_search_terms(file_path):
         # Load terms from a file
         # ...
         return #terms
+    
+    
+    
