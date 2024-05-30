@@ -15,9 +15,15 @@ class QueryBuilder:
         return "query"
 
     def get_query_data(self):
-        # Generate the dictionary with "name" and "query"
+        # Get the current domain number
+        current_domain_number = self.current_number_of_domain()
+        # Load the domains dictionary
+        domains_dict = self.load_domains()
+        # Get the domain data using the current domain number
+        domain_data = domains_dict.get(str(current_domain_number), {})
+        # Generate the dictionary with the domain "name" and "query"
         return {
-            "name": "name_data",
+            "name": domain_data.get("name", "default_name"),  # Use a default value if not found
             "query": self.build_query()
         }
 
