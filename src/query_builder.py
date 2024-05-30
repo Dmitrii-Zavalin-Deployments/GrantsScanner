@@ -29,6 +29,15 @@ class QueryBuilder:
         domains_dict = {str(i): domain for i, domain in enumerate(domains_list)}
         return domains_dict
 
+    def get_next_domain_key(self):
+            domains_dict = self.load_domains()
+            max_key = max(map(int, domains_dict.keys()))  # Convert keys to integers and find the max
+            return max_key + 1
     
-    
+    def current_number_of_domain(self):
+        next_domain_key = self.get_next_domain_key()
+        if self.run_number is not None:
+            return int(self.run_number) % next_domain_key
+        else:
+            return 0  # Default to 0 if run_number is not set
     
