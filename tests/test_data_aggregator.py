@@ -1,7 +1,9 @@
 import unittest
-from unittest.mock import patch, mock_open, call
+from unittest.mock import patch, mock_open, call, MagicMock
 import json
 from src.data_aggregator import DataAggregator
+import logging
+from io import StringIO
 
 class TestDataAggregator(unittest.TestCase):
 
