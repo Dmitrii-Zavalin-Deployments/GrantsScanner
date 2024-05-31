@@ -6,6 +6,7 @@ class DataAggregator:
     def __init__(self, grants_file_path):
         self.grants_file_path = grants_file_path
         self.logger = logging.getLogger(__name__)
+        self.logger.setLevel(logging.INFO)
 
     def read_grants_data(self):
         if os.path.exists(self.grants_file_path) and os.path.getsize(self.grants_file_path) > 0:
