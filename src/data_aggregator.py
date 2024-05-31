@@ -30,11 +30,11 @@ class DataAggregator:
         # If the PDF URL does not exist, create a new entry
         new_grant_data = {
             "name": query_data["name"],
-            "funds": parsed_data["Funds"],
-            "dates": parsed_data["Dates"],
-            "requirements": parsed_data["Requirements"],
-            "documents": parsed_data["Documents"],
-            "summary": parsed_data["Summary"],
+            "funds": ' '.join(parsed_data["Funds"]),
+            "dates": ' '.join(parsed_data["Dates"]),
+            "requirements": ' '.join(parsed_data["Requirements"]),
+            "documents": ' '.join(parsed_data["Documents"]),
+            "summary": ' '.join(parsed_data["Summary"]),
             "link": pdf_url,
             "query": query_data["query"]
         }
