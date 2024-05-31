@@ -64,7 +64,7 @@ class TestDataAggregator(unittest.TestCase):
             aggregator.add_grant_data(query_data, pdf_url, parsed_data)
 
         # Check the log output
-        self.assertIn("The grant with url: http://example.com/existing_grant.pdf is already in the system.", log_capture_string.getvalue())
+        self.assertIn("The grant with url: http://example.com/existing_grant.pdf is already in the system.", log_capture_string)
 
         # Remove the log handler after the test
         logger.removeHandler(ch)
