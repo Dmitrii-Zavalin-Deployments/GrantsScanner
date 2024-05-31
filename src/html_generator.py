@@ -33,12 +33,12 @@ class HTMLGenerator:
                 th {{
                     background-color: #f2f2f2;
                 }}
-                th:nth-child(1) {{ width: 5%; }} /* Number column */
-                th:nth-child(2) {{ width: 10%; }} /* Name column */
+                th:nth-child(1) {{ width: 2%; }} /* Number column */
+                th:nth-child(2) {{ width: 8%; }} /* Name column */
                 th:nth-child(3), th:nth-child(4), th:nth-child(5), th:nth-child(6) {{ width: 10%; }} /* Funds, Dates, Requirements, Documents columns */
                 th:nth-child(7) {{ width: 40%; }} /* Summary column */
-                th:nth-child(8) {{ width: 10%; }} /* Link column */
-                th:nth-child(9) {{ width: 10%; }} /* Query column */
+                th:nth-child(8) {{ width: 2%; }} /* Link column */
+                th:nth-child(9) {{ width: 8%; }} /* Query column */
                 .tabcontent {{
                     display: none;
                 }}
