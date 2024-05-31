@@ -9,6 +9,7 @@ class TestDataAggregator(unittest.TestCase):
 
     def setUp(self):
         self.aggregator = DataAggregator('test_grants.json')
+        self.logger = logging.getLogger(__name__)
 
     @patch('os.path.exists')
     @patch('os.path.getsize')
