@@ -37,7 +37,7 @@ jobs:
       - name: Set run number
         run: echo "GITHUB_RUN_NUMBER=${{ github.run_number }}" >> $GITHUB_ENV
 
-      - name: Commit and push changes # Need to add push to file data/grants.json
+      - name: Commit and push changes # Need to add push to file data/grants.json + need to delete .gitignore
         env:
           MY_USER_NAME: ${{ secrets.MY_USER_NAME }}
           MY_USER_EMAIL: ${{ secrets.MY_USER_EMAIL }}
