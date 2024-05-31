@@ -7,19 +7,23 @@
             <title>Grant Details</title>
             <style>
                 table {
-                    width: 100%;
+                    width: 140%; /* Make the table wider than the page */
                     border-collapse: collapse;
+                    table-layout: fixed; /* Fixed table layout to manage column widths */
                 }
                 table, th, td {
                     border: 1px solid black;
-                }
-                th, td {
                     padding: 10px;
                     text-align: left;
+                    vertical-align: top; /* Align text to the top of the cell */
                 }
                 th {
                     background-color: #f2f2f2;
                 }
+                th:nth-child(2) { width: 20%; } /* Name column */
+                th:nth-child(3), th:nth-child(4), th:nth-child(5), th:nth-child(6) { width: 10%; } /* Funds, Dates, Requirements, Documents columns */
+                th:nth-child(7) { width: 40%; } /* Summary column */
+                th:nth-child(9) { width: 10%; } /* Query column */
                 .tabcontent {
                     display: none;
                 }
