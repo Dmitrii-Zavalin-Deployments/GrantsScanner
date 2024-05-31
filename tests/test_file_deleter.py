@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch
-from file_deleter import FileDeleter
+from src.file_deleter import FileDeleter
 
 class TestFileDeleter(unittest.TestCase):
 

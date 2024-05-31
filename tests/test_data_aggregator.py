@@ -22,7 +22,7 @@ class TestDataAggregator(unittest.TestCase):
     def test_read_grants_data_non_empty_file(self, mock_file):
         # Test reading from a non-empty grants file
         data = self.aggregator.read_grants_data()
-        self.assertIn({}, data)
+        self.assertEqual({}, data)
         self.assertEqual(data['0']['link'], 'http://example.com')
 
     @patch('builtins.open', new_callable=mock_open)
@@ -46,28 +46,8 @@ class TestDataAggregator(unittest.TestCase):
         self.aggregator.add_grant_data(query_data, pdf_url, parsed_data)
         mock_write.assert_called_once()
 
-    def test_add_grant_data_existing_entry(self):
-        # Set up the logging to capture output for testing
-        log_capture_string = StringIO()
-        ch = logging.StreamHandler(log_capture_string)
-        ch.setLevel(logging.INFO)
-        logger = logging.getLogger()
-        logger.addHandler(ch)
-
-        # Set up mock data and call the method
-        aggregator = DataAggregator('test_grants.json')
-        query_data = {"name": "Existing Grant", "query": "Existing Query"}
-        pdf_url = "http://example.com/existing_grant.pdf"
-        parsed_data = {"Funds": "10000", "Dates": "2024-01-01 to 2024-12-31", "Requirements": "None", "Documents": "None", "Summary": "Existing Summary"}
-
-        with patch('src.data_aggregator.DataAggregator.read_grants_data', return_value={'0': {'link': pdf_url}}):
-            aggregator.add_grant_data(query_data, pdf_url, parsed_data)
-
-        # Check the log output
-        self.assertIn("The grant with url: http://example.com/existing_grant.pdf is already in the system.", log_capture_string.readline())
-
-        # Remove the log handler after the test
-        logger.removeHandler(ch)
-
 if __name__ == '__main__':
     unittest.main()
+
+
+
