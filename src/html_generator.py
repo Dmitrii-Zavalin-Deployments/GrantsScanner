@@ -1,5 +1,11 @@
+import os
+
 class HTMLGenerator:
     def generate_html(self, grants_data, output_file='grants.html'):
+        # Check if the output file exists and delete it if it does
+        if os.path.exists(output_file):
+            os.remove(output_file)
+
         # Read the reviewed links
         with open('data/reviewed_links.txt', 'r') as file:
             reviewed_links = file.read().splitlines()
@@ -27,8 +33,11 @@ class HTMLGenerator:
                 th {
                     background-color: #f2f2f2;
                 }
-                .tab {
+                .tabcontent {
                     display: none;
+                }
+                .active-tab {
+                    display: block;
                 }
             </style>
         </head>
@@ -80,13 +89,13 @@ class HTMLGenerator:
                     var i, tabcontent, tablinks;
                     tabcontent = document.getElementsByClassName("tabcontent");
                     for (i = 0; i < tabcontent.length; i++) {
-                        tabcontent[i].style.display = "none";
+                        tabcontent[i].className = tabcontent[i].className.replace(" active-tab", "");
                     }
                     tablinks = document.getElementsByClassName("tablinks");
                     for (i = 0; i < tablinks.length; i++) {
                         tablinks[i].className = tablinks[i].className.replace(" active", "");
                     }
-                    document.getElementById(tabName).style.display = "block";
+                    document.getElementById(tabName).className += " active-tab";
                     evt.currentTarget.className += " active";
                 }
             </script>
@@ -133,6 +142,7 @@ class HTMLGenerator:
             file.write(html_content)
 
         print(f"HTML file generated: {output_file}")
-
-
-
+        
+        
+        
+        
