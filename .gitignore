@@ -1,3 +1,4 @@
 downloaded_file.pdf
 src/__pycache__/
 tests/__pycache__/
+.github/workflows/main.yml
