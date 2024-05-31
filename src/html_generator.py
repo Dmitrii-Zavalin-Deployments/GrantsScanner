@@ -106,8 +106,9 @@ class HTMLGenerator:
         # Function to add rows to the HTML content
         def add_rows(tab_name, grants_list):
             nonlocal html_content
+            rows_html = ""
             for i, grant in enumerate(grants_list, start=1):
-                html_content += f"""
+                rows_html += f"""
                     <tr>
                         <td>{i}</td>
                         <td>{grant.get('name', 'N/A')}</td>
@@ -120,7 +121,7 @@ class HTMLGenerator:
                         <td>{grant.get('query', 'N/A')}</td>
                     </tr>
                 """
-            html_content = html_content.replace(f"<!-- {tab_name} Rows Will Go Here -->", "")
+            html_content = html_content.replace(f"<!-- {tab_name} Rows Will Go Here -->", rows_html)
 
         # Categorize grants into new and reviewed
         new_links_grants = []
