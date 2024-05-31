@@ -19,26 +19,26 @@ class HTMLGenerator:
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Grant Details</title>
             <style>
-                table {
+                table {{
                     width: 100%;
                     border-collapse: collapse;
-                }
-                table, th, td {
+                }}
+                table, th, td {{
                     border: 1px solid black;
-                }
-                th, td {
+                }}
+                th, td {{
                     padding: 10px;
                     text-align: left;
-                }
-                th {
+                }}
+                th {{
                     background-color: #f2f2f2;
-                }
-                .tabcontent {
+                }}
+                .tabcontent {{
                     display: none;
-                }
-                .active-tab {
+                }}
+                .active-tab {{
                     display: block;
-                }
+                }}
             </style>
         </head>
         <body>
@@ -62,7 +62,7 @@ class HTMLGenerator:
                         <th>Link</th>
                         <th>Query</th>
                     </tr>
-                    <!-- New Links Rows Will Go Here -->
+                    {new_links_rows}
                 </table>
             </div>
 
@@ -80,7 +80,7 @@ class HTMLGenerator:
                         <th>Link</th>
                         <th>Query</th>
                     </tr>
-                    <!-- Reviewed Links Rows Will Go Here -->
+                    {reviewed_links_rows}
                 </table>
             </div>
 
@@ -103,9 +103,8 @@ class HTMLGenerator:
         </html>
         """
 
-        # Function to add rows to the HTML content
-        def add_rows(tab_name, grants_list):
-            nonlocal html_content
+        # Function to create rows HTML
+        def create_rows_html(grants_list):
             rows_html = ""
             for i, grant in enumerate(grants_list, start=1):
                 rows_html += f"""
@@ -121,7 +120,7 @@ class HTMLGenerator:
                         <td>{grant.get('query', 'N/A')}</td>
                     </tr>
                 """
-            html_content = html_content.replace(f"<!-- {tab_name} Rows Will Go Here -->", rows_html)
+            return rows_html
 
         # Categorize grants into new and reviewed
         new_links_grants = []
@@ -132,11 +131,12 @@ class HTMLGenerator:
             else:
                 new_links_grants.append(grant)
 
-        # Add rows to the New Links tab
-        add_rows("NewLinks", new_links_grants)
+        # Create rows HTML for New and Reviewed Links
+        new_links_rows = create_rows_html(new_links_grants)
+        reviewed_links_rows = create_rows_html(reviewed_links_grants)
 
-        # Add rows to the Reviewed Links tab
-        add_rows("ReviewedLinks", reviewed_links_grants)
+        # Format the HTML content with the rows
+        html_content = html_content.format(new_links_rows=new_links_rows, reviewed_links_rows=reviewed_links_rows)
 
         # Write the HTML content to the output file
         with open(output_file, 'w') as file:
