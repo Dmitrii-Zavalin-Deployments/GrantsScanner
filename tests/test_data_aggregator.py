@@ -2,8 +2,8 @@ import unittest
 from unittest.mock import patch, mock_open, call
 import json
 import sys
-sys.path.append('../src')
-from src.data_aggregator import DataAggregator
+sys.path.append('../src/')
+from data_aggregator import DataAggregator
 
 class TestDataAggregator(unittest.TestCase):
 
