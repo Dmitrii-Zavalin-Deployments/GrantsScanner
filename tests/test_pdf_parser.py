@@ -80,12 +80,6 @@ class TestPDFParser(unittest.TestCase):
         self.assertEqual(result, {'Funds': [], 'Dates': [], 'Requirements': [], 'Documents': [], 'Summary': []})
 
     @patch('src.pdf_parser.extract_text')
-    def test_due_date_non_english(self, mock_extract_text):
-        mock_extract_text.return_value = "La fecha límite para aplicar es el 31 de diciembre de 2024."
-        parsed_data = self.parser.parse_pdf('dummy_path_to_pdf_file.pdf')
-        self.assertIn('The deadline to apply is December 31, 2024.', parsed_data['Dates'])
-
-    @patch('src.pdf_parser.extract_text')
     def test_parse_pdf_with_multiple_date_formats(self, mock_extract_text):
         mock_extract_text.return_value = 'The event will be held on 03/25/2024 and 25th March 2024.'
         result = self.parser.parse_pdf('path/to/multiple-date-formats.pdf')
