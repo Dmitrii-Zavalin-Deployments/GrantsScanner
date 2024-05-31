@@ -28,13 +28,13 @@ class TestDataAggregator(unittest.TestCase):
         # Test writing data to the grants file
         test_data = {'1': {'link': 'http://example.com/new'}}
         self.aggregator.write_grants_data(test_data)
-        expected_calls = [
-            call(json.dumps(test_data, indent=4))
-        ]
-        mock_file().write.assert_has_calls(expected_calls, any_order=True)
+        mock_file_handle = mock_file()
+        expected_json = json.dumps(test_data, indent=4)
+        actual_calls = ''.join(call_args[0][0] for call_args in mock_file_handle.write.call_args_list)
+        self.assertEqual(expected_json, actual_calls)
 
-    @patch('../src.data_aggregator.DataAggregator.read_grants_data')
-    @patch('../src.data_aggregator.DataAggregator.write_grants_data')
+    @patch('src.data_aggregator.DataAggregator.read_grants_data')
+    @patch('src.data_aggregator.DataAggregator.write_grants_data')
     def test_add_grant_data_new_entry(self, mock_write, mock_read):
         # Test adding a new grant entry
         mock_read.return_value = {}
@@ -44,7 +44,7 @@ class TestDataAggregator(unittest.TestCase):
         self.aggregator.add_grant_data(query_data, pdf_url, parsed_data)
         mock_write.assert_called_once()
 
-    @patch('data_aggregator.DataAggregator.read_grants_data')
+    @patch('src.data_aggregator.DataAggregator.read_grants_data')
     def test_add_grant_data_existing_entry(self, mock_read):
         # Test adding a grant entry that already exists
         mock_read.return_value = {'0': {'link': 'http://example.com/existing_grant.pdf'}}
