@@ -25,7 +25,7 @@ class DataAggregator:
         for grant_id, grant_info in grants_data.items():
             if grant_info.get('link') == pdf_url:
                 print(f"The grant with url: {pdf_url} is already in the system.")
-                return
+                return grants_data
         
         # If the PDF URL does not exist, create a new entry
         new_grant_data = {
@@ -46,6 +46,10 @@ class DataAggregator:
         # Write the updated data back to the file
         self.write_grants_data(grants_data)
         print(f"Added new grant data for url: {pdf_url}")
+        return grants_data
+    
+    
+    
 
 
 
