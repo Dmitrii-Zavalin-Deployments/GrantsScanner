@@ -28,9 +28,9 @@ def main():
         # Download pdf from each link
         # downloader.download_pdf(pdf_url) # Commented for not spamming on tests
         # Parse pdf from each download
-        parsed_data = parser.parse_pdf('downloaded_file.pdf')
+        # parsed_data = parser.parse_pdf('downloaded_file.pdf')
         print('Parsed data: ')
-        print(parsed_data)
+        # print(parsed_data)
     # 
     # Generating HTML 
     html_generator.generate_html()
