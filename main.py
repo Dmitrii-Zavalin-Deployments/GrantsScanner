@@ -31,24 +31,13 @@ def main():
         # Download pdf from each link
         # downloader.download_pdf(pdf_url) # Commented for not spamming on tests
         # Parse pdf from each download
-        # parsed_data = parser.parse_pdf('downloaded_file.pdf')
+        parsed_data = parser.parse_pdf('downloaded_file.pdf')
         print('Parsed data: ')
-        # print(parsed_data)
+        print(parsed_data)
         # Delete parsed pdf file
         # deleter.delete_file()
         # Aggregate data for grants.json and html
-        # Testing
-        # Replace these with actual function calls or data retrieval logic
-        query_data_example = {"name": "Example Name", "query": "Example Query"}
-        pdf_url_example = "http://example.com/grant2.pdf"
-        parsed_data_example = {
-            "Funds": "10000",
-            "Dates": "2024-01-01 to 2024-12-31",
-            "Requirements": "Example Requirements",
-            "Documents": "Example Documents",
-            "Summary": "Example Summary"
-        }
-        grants_data = aggregator.add_grant_data(query_data_example, pdf_url_example, parsed_data_example)
+        grants_data = aggregator.add_grant_data(query_data, pdf_url, parsed_data)
         # Generating HTML 
         html_generator.generate_html(grants_data)
 
