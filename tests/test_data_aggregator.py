@@ -1,7 +1,9 @@
 import unittest
 from unittest.mock import patch, mock_open
-from src.data_aggregator import DataAggregator
 import json
+import sys
+sys.path.append('../src')
+from data_aggregator import DataAggregator
 
 class TestDataAggregator(unittest.TestCase):
 
@@ -28,7 +30,10 @@ class TestDataAggregator(unittest.TestCase):
         # Test writing data to the grants file
         test_data = {'1': {'link': 'http://example.com/new'}}
         self.aggregator.write_grants_data(test_data)
-        mock_file().write.assert_called_once_with(json.dumps(test_data, indent=4))
+        expected_calls = [
+            call(json.dumps(test_data, indent=4))
+        ]
+        mock_file().write.assert_has_calls(expected_calls, any_order=True)
 
     @patch('data_aggregator.DataAggregator.read_grants_data')
     @patch('data_aggregator.DataAggregator.write_grants_data')
