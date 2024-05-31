@@ -3,15 +3,16 @@ from src.search_executor import SearchExecutor
 from src.html_generator import HTMLGenerator
 from src.pdf_downloader import PDFDownloader
 from src.pdf_parser import PDFParser
-# ... other imports
+from src.data_aggregator import DataAggregator
 
 def main():
     # Initialize modules
     query_builder = QueryBuilder()
     # search_executor = SearchExecutor()
-    html_generator = HTMLGenerator('data/grants.json')
     downloader = PDFDownloader()
     parser = PDFParser()
+    aggregator = DataAggregator('data/grants.json')
+    # html_generator = HTMLGenerator('data/grants.json')
     
     # ... other module initializations
 
@@ -32,9 +33,21 @@ def main():
         print('Parsed data: ')
         # print(parsed_data)
         # Aggregate data for grants.json and html
+        # Testing
+        # Replace these with actual function calls or data retrieval logic
+        query_data_example = {"name": "Example Name", "query": "Example Query"}
+        pdf_url_example = "http://example.com/grant.pdf"
+        parsed_data_example = {
+            "Funds": "10000",
+            "Dates": "2024-01-01 to 2024-12-31",
+            "Requirements": "Example Requirements",
+            "Documents": "Example Documents",
+            "Summary": "Example Summary"
+        }
+        aggregator.add_grant_data(query_data_example, pdf_url_example, parsed_data_example)
     # 
     # Generating HTML 
-    html_generator.generate_html()
+    # html_generator.generate_html()
 
 if __name__ == "__main__":
     main()
