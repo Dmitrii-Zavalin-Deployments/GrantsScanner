@@ -48,10 +48,9 @@ def main():
             "Documents": "Example Documents",
             "Summary": "Example Summary"
         }
-        aggregator.add_grant_data(query_data_example, pdf_url_example, parsed_data_example)
-    # 
-    # Generating HTML 
-    # html_generator.generate_html()
+        grants_data = aggregator.add_grant_data(query_data_example, pdf_url_example, parsed_data_example)
+        # Generating HTML 
+        # html_generator.generate_html()
 
 if __name__ == "__main__":
     main()
