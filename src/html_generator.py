@@ -20,7 +20,7 @@ class HTMLGenerator:
             <title>Grant Details</title>
             <style>
                 table {{
-                    width: 140%; /* Make the table wider than the page */
+                    width: 300%; /* Make the table wider than the page */
                     border-collapse: collapse;
                     table-layout: fixed; /* Fixed table layout to manage column widths */
                 }}
@@ -33,9 +33,11 @@ class HTMLGenerator:
                 th {{
                     background-color: #f2f2f2;
                 }}
-                th:nth-child(2) {{ width: 20%; }} /* Name column */
+                th:nth-child(1) {{ width: 5%; }} /* Number column */
+                th:nth-child(2) {{ width: 10%; }} /* Name column */
                 th:nth-child(3), th:nth-child(4), th:nth-child(5), th:nth-child(6) {{ width: 10%; }} /* Funds, Dates, Requirements, Documents columns */
                 th:nth-child(7) {{ width: 40%; }} /* Summary column */
+                th:nth-child(8) {{ width: 10%; }} /* Link column */
                 th:nth-child(9) {{ width: 10%; }} /* Query column */
                 .tabcontent {{
                     display: none;
