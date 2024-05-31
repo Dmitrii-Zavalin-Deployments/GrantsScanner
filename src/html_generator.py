@@ -41,7 +41,7 @@ class HTMLGenerator:
                 }}
             </style>
         </head>
-        <body>
+        <body onload="openTab(event, 'NewLinks')">
             <h1>Grant Details</h1>
             <div class="tab">
                 <button class="tablinks" onclick="openTab(event, 'NewLinks')">New Links</button>
@@ -96,8 +96,12 @@ class HTMLGenerator:
                         tablinks[i].className = tablinks[i].className.replace(" active", "");
                     }}
                     document.getElementById(tabName).className += " active-tab";
-                    evt.currentTarget.className += " active";
+                    if (evt) evt.currentTarget.className += " active";
                 }}
+                // Call openTab to set the default tab when the page loads
+                document.addEventListener('DOMContentLoaded', (event) => {{
+                    openTab(null, 'NewLinks');
+                }});
             </script>
         </body>
         </html>
@@ -116,7 +120,7 @@ class HTMLGenerator:
                         <td>{grant.get('requirements', 'N/A')}</td>
                         <td>{grant.get('documents', 'N/A')}</td>
                         <td>{grant.get('summary', 'N/A')}</td>
-                        <td><a href="{grant.get('link', '#')}">Details</a></td>
+                        <td><a href="{grant.get('link', '#')}" target="_blank">Details</a></td>
                         <td>{grant.get('query', 'N/A')}</td>
                     </tr>
                 """
@@ -143,7 +147,7 @@ class HTMLGenerator:
             file.write(html_content)
 
         print(f"HTML file generated: {output_file}")
-        
-        
-        
-        
+
+
+
+

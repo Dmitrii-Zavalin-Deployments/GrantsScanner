@@ -28,7 +28,7 @@
                 }
             </style>
         </head>
-        <body>
+        <body onload="openTab(event, 'NewLinks')">
             <h1>Grant Details</h1>
             <div class="tab">
                 <button class="tablinks" onclick="openTab(event, 'NewLinks')">New Links</button>
@@ -58,7 +58,7 @@
                         <td>Example Requirements</td>
                         <td>Example Documents</td>
                         <td>Example Summary</td>
-                        <td><a href="http://example.com/grant.pdf">Details</a></td>
+                        <td><a href="http://example.com/grant.pdf" target="_blank">Details</a></td>
                         <td>Example Query</td>
                     </tr>
                 
@@ -70,7 +70,7 @@
                         <td>Example Requirements</td>
                         <td>Example Documents</td>
                         <td>Example Summary</td>
-                        <td><a href="http://example.com/grant1.pdf">Details</a></td>
+                        <td><a href="http://example.com/grant1.pdf" target="_blank">Details</a></td>
                         <td>Example Query</td>
                     </tr>
                 
@@ -82,7 +82,7 @@
                         <td>Example Requirements</td>
                         <td>Example Documents</td>
                         <td>Example Summary</td>
-                        <td><a href="http://example.com/grant2.pdf">Details</a></td>
+                        <td><a href="http://example.com/grant2.pdf" target="_blank">Details</a></td>
                         <td>Example Query</td>
                     </tr>
                 
@@ -119,8 +119,12 @@
                         tablinks[i].className = tablinks[i].className.replace(" active", "");
                     }
                     document.getElementById(tabName).className += " active-tab";
-                    evt.currentTarget.className += " active";
+                    if (evt) evt.currentTarget.className += " active";
                 }
+                // Call openTab to set the default tab when the page loads
+                document.addEventListener('DOMContentLoaded', (event) => {
+                    openTab(null, 'NewLinks');
+                });
             </script>
         </body>
         </html>
