@@ -9,7 +9,6 @@ class TestDataAggregator(unittest.TestCase):
 
     def setUp(self):
         self.aggregator = DataAggregator('test_grants.json')
-        self.logger = logging.getLogger(__name__)
 
     @patch('os.path.exists')
     @patch('os.path.getsize')
@@ -23,7 +22,7 @@ class TestDataAggregator(unittest.TestCase):
     def test_read_grants_data_non_empty_file(self, mock_file):
         # Test reading from a non-empty grants file
         data = self.aggregator.read_grants_data()
-        self.assertIn('0', data)
+        self.assertIn({}, data)
         self.assertEqual(data['0']['link'], 'http://example.com')
 
     @patch('builtins.open', new_callable=mock_open)
