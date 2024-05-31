@@ -1,9 +1,7 @@
 import unittest
 from unittest.mock import patch, mock_open, call
 import json
-import sys
-sys.path.append('../src/')
-from data_aggregator import DataAggregator
+from src.data_aggregator import DataAggregator
 
 class TestDataAggregator(unittest.TestCase):
 
@@ -35,8 +33,8 @@ class TestDataAggregator(unittest.TestCase):
         ]
         mock_file().write.assert_has_calls(expected_calls, any_order=True)
 
-    @patch('data_aggregator.DataAggregator.read_grants_data')
-    @patch('data_aggregator.DataAggregator.write_grants_data')
+    @patch('../src.data_aggregator.DataAggregator.read_grants_data')
+    @patch('../src.data_aggregator.DataAggregator.write_grants_data')
     def test_add_grant_data_new_entry(self, mock_write, mock_read):
         # Test adding a new grant entry
         mock_read.return_value = {}
