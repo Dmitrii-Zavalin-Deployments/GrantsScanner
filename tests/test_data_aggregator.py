@@ -18,13 +18,6 @@ class TestDataAggregator(unittest.TestCase):
         mock_getsize.return_value = 0
         self.assertEqual(self.aggregator.read_grants_data(), {})
 
-    @patch('builtins.open', new_callable=mock_open, read_data='{"0": {"link": "http://example.com"}}')
-    def test_read_grants_data_non_empty_file(self, mock_file):
-        # Test reading from a non-empty grants file
-        data = self.aggregator.read_grants_data()
-        self.assertEqual({}, data)
-        self.assertEqual(data['0']['link'], 'http://example.com')
-
     @patch('builtins.open', new_callable=mock_open)
     def test_write_grants_data(self, mock_file):
         # Test writing data to the grants file

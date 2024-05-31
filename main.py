@@ -4,6 +4,7 @@ from src.html_generator import HTMLGenerator
 from src.pdf_downloader import PDFDownloader
 from src.pdf_parser import PDFParser
 from src.data_aggregator import DataAggregator
+from src.file_deleter import FileDeleter
 
 def main():
     # Initialize modules
@@ -12,6 +13,7 @@ def main():
     downloader = PDFDownloader()
     parser = PDFParser()
     aggregator = DataAggregator('data/grants.json')
+    deleter = FileDeleter('downloaded_file.pdf')
     # html_generator = HTMLGenerator('data/grants.json')
     
     # ... other module initializations
@@ -32,6 +34,8 @@ def main():
         # parsed_data = parser.parse_pdf('downloaded_file.pdf')
         print('Parsed data: ')
         # print(parsed_data)
+        # Delete parsed pdf file
+        deleter.delete_file()
         # Aggregate data for grants.json and html
         # Testing
         # Replace these with actual function calls or data retrieval logic
