@@ -20,23 +20,105 @@
                 th {
                     background-color: #f2f2f2;
                 }
+                .tab {
+                    display: none;
+                }
             </style>
         </head>
         <body>
             <h1>Grant Details</h1>
-            <table>
-                <tr>
-                    <th>No.</th>
-                    <th>Country</th>
-                    <th>Max Funding</th>
-                    <th>Due Date</th>
-                    <th>Requirements</th>
-                    <th>Submission Items</th>
-                    <th>PDF Link</th>
-                    <th>Query</th>
-                </tr>
-        
-            </table>
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'NewLinks')">New Links</button>
+                <button class="tablinks" onclick="openTab(event, 'ReviewedLinks')">Reviewed Links</button>
+            </div>
+
+            <div id="NewLinks" class="tabcontent">
+                <h2>New Links</h2>
+                <table>
+                    <tr>
+                        <th>Number</th>
+                        <th>Name</th>
+                        <th>Funds</th>
+                        <th>Dates</th>
+                        <th>Requirements</th>
+                        <th>Documents</th>
+                        <th>Summary</th>
+                        <th>Link</th>
+                        <th>Query</th>
+                    </tr>
+                    <!-- New Links Rows Will Go Here -->
+                </table>
+            </div>
+
+            <div id="ReviewedLinks" class="tabcontent">
+                <h2>Reviewed Links</h2>
+                <table>
+                    <tr>
+                        <th>Number</th>
+                        <th>Name</th>
+                        <th>Funds</th>
+                        <th>Dates</th>
+                        <th>Requirements</th>
+                        <th>Documents</th>
+                        <th>Summary</th>
+                        <th>Link</th>
+                        <th>Query</th>
+                    </tr>
+                    <!-- Reviewed Links Rows Will Go Here -->
+                </table>
+            </div>
+
+            <script>
+                function openTab(evt, tabName) {
+                    var i, tabcontent, tablinks;
+                    tabcontent = document.getElementsByClassName("tabcontent");
+                    for (i = 0; i < tabcontent.length; i++) {
+                        tabcontent[i].style.display = "none";
+                    }
+                    tablinks = document.getElementsByClassName("tablinks");
+                    for (i = 0; i < tablinks.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" active", "");
+                    }
+                    document.getElementById(tabName).style.display = "block";
+                    evt.currentTarget.className += " active";
+                }
+            </script>
         </body>
         </html>
         
+                    <tr>
+                        <td>1</td>
+                        <td>Example Name</td>
+                        <td>10000</td>
+                        <td>2024-01-01 to 2024-12-31</td>
+                        <td>Example Requirements</td>
+                        <td>Example Documents</td>
+                        <td>Example Summary</td>
+                        <td><a href="http://example.com/grant.pdf">Details</a></td>
+                        <td>Example Query</td>
+                    </tr>
+                
+                    <tr>
+                        <td>2</td>
+                        <td>Example Name</td>
+                        <td>10000</td>
+                        <td>2024-01-01 to 2024-12-31</td>
+                        <td>Example Requirements</td>
+                        <td>Example Documents</td>
+                        <td>Example Summary</td>
+                        <td><a href="http://example.com/grant1.pdf">Details</a></td>
+                        <td>Example Query</td>
+                    </tr>
+                
+                    <tr>
+                        <td>3</td>
+                        <td>Example Name</td>
+                        <td>10000</td>
+                        <td>2024-01-01 to 2024-12-31</td>
+                        <td>Example Requirements</td>
+                        <td>Example Documents</td>
+                        <td>Example Summary</td>
+                        <td><a href="http://example.com/grant2.pdf">Details</a></td>
+                        <td>Example Query</td>
+                    </tr>
+                

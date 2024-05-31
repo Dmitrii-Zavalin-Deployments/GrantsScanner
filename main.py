@@ -14,7 +14,7 @@ def main():
     parser = PDFParser()
     aggregator = DataAggregator('data/grants.json')
     deleter = FileDeleter('downloaded_file.pdf')
-    # html_generator = HTMLGenerator('data/grants.json')
+    html_generator = HTMLGenerator()
     
     # ... other module initializations
 
@@ -50,7 +50,7 @@ def main():
         }
         grants_data = aggregator.add_grant_data(query_data_example, pdf_url_example, parsed_data_example)
         # Generating HTML 
-        # html_generator.generate_html()
+        html_generator.generate_html(grants_data)
 
 if __name__ == "__main__":
     main()
