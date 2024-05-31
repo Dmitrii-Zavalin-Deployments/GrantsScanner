@@ -46,4 +46,14 @@ class QueryBuilder:
             return int(self.run_number) % next_domain_key
         else:
             return 0  # Default to 0 if run_number is not set
+        
+    def load_search_terms(self, file_path):
+        # This method will read search terms from a file and return them as a list
+        try:
+            with open(file_path, 'r') as file:
+                terms = file.read().splitlines()
+            return terms
+        except FileNotFoundError:
+            print(f"The file {file_path} was not found.")
+            return []
     
