@@ -16,8 +16,6 @@ def main():
     deleter = FileDeleter('downloaded_file.pdf')
     html_generator = HTMLGenerator()
     
-    # ... other module initializations
-
     # Build the search query
     query_data = query_builder.get_query_data()
     # print(f'Domain: {query_data["name"]}')
@@ -29,7 +27,7 @@ def main():
     # Continue with downloading, parsing, aggregating
     for pdf_url in pdf_links:
         # Download pdf from each link
-        downloader.download_pdf(pdf_url) # Commented not to spam on testing
+        # downloader.download_pdf(pdf_url) # Commented not to spam on testing
         # Parse pdf from each download
         parsed_data = parser.parse_pdf('downloaded_file.pdf')
         print('Data is parsed')

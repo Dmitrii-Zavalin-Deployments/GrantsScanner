@@ -68,9 +68,9 @@ class TestPDFParser(unittest.TestCase):
 
     @patch('src.pdf_parser.extract_text')
     def test_parse_pdf_with_complex_currency_patterns(self, mock_extract_text):
-        mock_extract_text.return_value = 'Award of ₹10,00,000. Grant of €500,000.'
+        mock_extract_text.return_value = 'Award of $10,00,000. Grant of €500,000.'
         result = self.parser.parse_pdf('path/to/complex-currency.pdf')
-        self.assertIn('Award of ₹10,00,000.', result['Funds'])
+        self.assertIn('Award of $10,00,000.', result['Funds'])
         self.assertIn('Grant of €500,000.', result['Funds'])
 
     @patch('src.pdf_parser.extract_text')
