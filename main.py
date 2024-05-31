@@ -29,7 +29,7 @@ def main():
     # Continue with downloading, parsing, aggregating
     for pdf_url in pdf_links:
         # Download pdf from each link
-        downloader.download_pdf(pdf_url)
+        # downloader.download_pdf(pdf_url) # Commented not to spam on testing
         # Parse pdf from each download
         parsed_data = parser.parse_pdf('downloaded_file.pdf')
         print('Data is parsed')
