@@ -36,7 +36,7 @@ def main():
         # Testing
         # Replace these with actual function calls or data retrieval logic
         query_data_example = {"name": "Example Name", "query": "Example Query"}
-        pdf_url_example = "http://example.com/grant.pdf"
+        pdf_url_example = "http://example.com/grant2.pdf"
         parsed_data_example = {
             "Funds": "10000",
             "Dates": "2024-01-01 to 2024-12-31",

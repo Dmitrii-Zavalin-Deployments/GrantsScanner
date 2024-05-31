@@ -1,1 +1,32 @@
-[]
+{
+    "0": {
+        "name": "Example Name",
+        "funds": "10000",
+        "dates": "2024-01-01 to 2024-12-31",
+        "requirements": "Example Requirements",
+        "documents": "Example Documents",
+        "summary": "Example Summary",
+        "link": "http://example.com/grant.pdf",
+        "query": "Example Query"
+    },
+    "1": {
+        "name": "Example Name",
+        "funds": "10000",
+        "dates": "2024-01-01 to 2024-12-31",
+        "requirements": "Example Requirements",
+        "documents": "Example Documents",
+        "summary": "Example Summary",
+        "link": "http://example.com/grant1.pdf",
+        "query": "Example Query"
+    },
+    "2": {
+        "name": "Example Name",
+        "funds": "10000",
+        "dates": "2024-01-01 to 2024-12-31",
+        "requirements": "Example Requirements",
+        "documents": "Example Documents",
+        "summary": "Example Summary",
+        "link": "http://example.com/grant2.pdf",
+        "query": "Example Query"
+    }
+}
