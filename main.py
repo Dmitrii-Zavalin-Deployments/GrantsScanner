@@ -35,7 +35,7 @@ def main():
         print('Parsed data: ')
         # print(parsed_data)
         # Delete parsed pdf file
-        deleter.delete_file()
+        # deleter.delete_file()
         # Aggregate data for grants.json and html
         # Testing
         # Replace these with actual function calls or data retrieval logic
