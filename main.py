@@ -22,7 +22,7 @@ def main():
     # print(f'Query: {query_data["query"]}')
     
     # Execute the search and get PDF links
-    pdf_links = ["https://www.eggfarmers.ca/wp-content/uploads/2024/01/2024-Call-for-LOIs_Applicant-Information-Package_ENG.pdf"] # search_executor.execute_search(query)
+    pdf_links = [] # search_executor.execute_search(query)
     
     # Continue with downloading, parsing, aggregating
     for pdf_url in pdf_links:
