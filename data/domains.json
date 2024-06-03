@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Commercial entities",
+        "domain": ".com"
+    },
+    {
+        "name": "Organizations",
+        "domain": ".org"
+    },
+    {
+        "name": "Network infrastructure",
+        "domain": ".net"
+    },
+    {
+        "name": "Educational institutions",
+        "domain": ".edu"
+    },
+    {
+        "name": "Government entities",
+        "domain": ".gov"
+    },
+    {
+        "name": "International organizations",
+        "domain": ".int"
+    },
+    {
+        "name": "Information services",
+        "domain": ".info"
+    },
+    {
+        "name": "Businesses",
+        "domain": ".biz"
+    },
+    {
+        "name": "Professionals",
+        "domain": ".pro"
+    },
+    {
+        "name": "Mobile devices",
+        "domain": ".mobi"
+    },
+    {
+        "name": "Cooperative associations",
+        "domain": ".coop"
+    },
+    {
+        "name": "Aero industry",
+        "domain": ".aero"
+    },
+    {
+        "name": "Travel and tourism industry",
+        "domain": ".travel"
+    },
+    {
+        "name": "Museum institutions",
+        "domain": ".museum"
+    },
+    {
+        "name": "Jobs and employment",
+        "domain": ".jobs"
+    },
+    {
+        "name": "Mobile",
+        "domain": ".tel"
+    },
+    {
+        "name": "XXX entertainment",
+        "domain": ".xxx"
+    },
+    {
+        "name": "Personal sites",
+        "domain": ".name"
+    }
+]

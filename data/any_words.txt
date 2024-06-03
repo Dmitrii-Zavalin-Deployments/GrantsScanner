@@ -1,0 +1,5 @@
+aviation
+ecofriendly
+transport
+recreation
+tourism

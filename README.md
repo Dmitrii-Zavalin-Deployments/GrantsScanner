@@ -1,31 +1,17 @@
-# GrantsScanner
+# Project Update: Transition to Grants Scanner Website
 
-Project Directory Structure:
+## Important Notice
 
-/GrantsScanner/
-|-- /data/
-|   |-- all_words.txt
-|   |-- any_words.txt
-|   |-- none_words.txt
-|   |-- domains.txt
-|-- /src/
-|   |-- __init__.py
-|   |-- query_builder.py
-|   |-- search_executor.py
-|   |-- pdf_downloader.py
-|   |-- pdf_parser.py
-|   |-- data_aggregator.py
-|   |-- html_generator.py
-|-- /tests/
-|   |-- __init__.py
-|   |-- test_query_builder.py
-|   |-- test_search_executor.py
-|   |-- test_pdf_downloader.py
-|   |-- test_pdf_parser.py
-|   |-- test_data_aggregator.py
-|   |-- test_html_generator.py
-|-- /.github/
-|   |-- /workflows/
-|   |   | -- main.yml
-|-- main.py
-|-- requirements.txt
+This project has been discontinued. In compliance with regulations concerning automatic data scraping, the decision was made to cease the development and operation of the fully automated grants searcher and scanner script.
+
+## Project Evolution
+
+While the original intent was to create a completely automated solution for grant searching and scanning, it became clear that such automation could conflict with legal standards. Therefore, the functionality of this project has been adapted to **analyze** data without scraping, ensuring full adherence to all applicable laws and regulations.
+
+## Introducing the Grants Scanner Website
+
+In place of the automated Python script, a new platform has been developed to serve the project's goals within the bounds of the law. I am excited to introduce the Grants Scanner Website: https://grants-scanner.bitbucket.io/. It's a React-based web application that embodies the spirit of the original project while maintaining legal compliance.
+
+I encourage you to visit the new website and explore its features. Your feedback is invaluable.
+
+Thank you
